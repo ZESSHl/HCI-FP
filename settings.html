@@ -13,26 +13,38 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
 </head>
 <body>
     
 <!-- header -->
 
-<header class="main-header">
-    <h1 class="logo">
-        <img src="images/Untitled design (1).png" alt="La Cousine Logo" class="logo-img">
-        La Cousine
-    </h1>
-    <nav class="nav-links">
-        <a href="home">Home</a>
-        <a href="about">About</a>
-        <a href="favorites"><i class="fa-solid fa-heart"></i> Favorites</a>
-        <a href="profile">
-            <img src="images/Default_pfp.svg.png" alt="profpic" class="profile-pic">Profile
-        </a>
-    </nav>
-</header>
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <img src="./images/logo.png" alt="">
+                <h1>La cuisine</h1>
+            </div>
+
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <div class="navbar">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href=""><i class="fa-solid fa-heart"></i> Favorite</a>
+                <a href=""><i class="fa-solid fa-circle-user"></i>Profile</a>
+            
+            </div>
+        </nav>
+
+    </header>
 
 <!-- settings -->
 
@@ -100,36 +112,37 @@
 
 <!-- footer -->
 
-<footer class="footer">
-    <div class="footer-container">
+    <footer>
+        <div class="footer-content">
+            <div class="footer-element">
+                <h1>La Cuisine</h1>
+                <p>Fresh and halal meals made easy</p>
+            </div>
+            <div class="footer-element">
+                <div class="link">
+                    <a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Favorite</a>
+                    <a href="">Profile</a>
+                </div>
+            </div>
+            <div class="footer-element">
+                <p class="follow">Follow Us</p>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-youtube"></i>
 
-        <div class="footer-brand-section">
-            <h2>La Cuisine</h2>
-            <p>Fresh and halal meals made easy</p>
-        </div>
+                </div>
 
-        <div class="footer-links">
-            <a href="home">Home</a>
-            <a href="about">About</a>
-            <a href="favorites">Favorites</a>
-            <a href="profile">Profile</a>
-        </div>
-
-        <div class="socials">
-            <h3>Follow Us</h3>
-            <div class="socials-icon">
-                <a href="SOCIALS-PLACEHOLDER"><i class="fa-brands fa-facebook"></i></a>
-                <a href="SOCIALS-PLACEHOLDER"><i class="fa-brands fa-instagram"></i></a>
-                <a href="SOCIALS-PLACEHOLDER"><i class="fa-brands fa-tiktok"></i></a>
-                <a href="SOCIALS-PLACEHOLDER"><i class="fa-brands fa-youtube"></i></a>
             </div>
         </div>
-    </div>
-
-    <div class="copyright">
-        <p>&copy; 2025 LaCuisine. All rights reserved.</p>
-    </div>
-</footer>
+        <div class="hr"></div>
+        <div class="copyright">
+            <p>&copy; 2025 LaCuisine. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
