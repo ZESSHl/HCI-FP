@@ -2,13 +2,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: Poppins , sans-serif;
     background-color: #020d16;
+    padding-top: 200px;
 }
 
 
@@ -18,107 +20,154 @@ body {
 
 /* header */
 
-.main-header {
-    height: 114px;
-    background-color: #131619;
-    color: #ffffff;
+.header nav {
+    background-color: #121619;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 64px;
+    height: 114px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    color: #FFF;
+    font-family: Poppins sans-serif;
 }
 
 .logo {
     display: flex;
+    padding: 23px 12px;
     align-items: center;
-    gap: 12px;
-    font-family: "Inria Serif", serif;
-    font-size: 32;
-    font-weight: 700;
+    flex: 1 0 0;
 }
 
-.logo-img {
+nav .logo img {
     width: 112px;
     height: 68px;
-    object-fit: contain;
+    aspect-ratio: 28/17;
+}
+
+nav .navbar {
+    display: flex;
+
+    width: 667px;
+    height: 111px;
+    padding: 28px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+.navbar i{
+    margin-right: 10px;
+}
+.navbar .fa-heart{
+    color: red;
+}
+
+.navbar a {
+    font-size: 32px;
+    color: white;
+}
+
+.nav-element {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.562)),
+        url("./images/nav-element.png");
+
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 222px;
+}
+
+.nav-element h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 64px;
+    width: 690px;
+    font-style: normal;
+    font-weight: 700;
 }
 
 
 /* footer */
 
-.footer {
-    margin: 0 auto;
-    padding: 32px 64px 16px;
-    background: url(images/Body-2.png) lightgray 50% / cover no-repeat;
-    color: #ffffff;
-    font-family: "Inter", sans-serif;
+footer {
+    background:
+        url("./images/footer.png") 50% / cover no-repeat;
+    height: 312px;
 }
 
-.footer-container {
+.footer-content {
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 25em;
+        font-family: Poppins sans-serif;
+
 }
 
-.footer-brand-section h2 {
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 9px ;
-    margin-left: 350px;
+.footer-element {
+
+    height: 129px;
+    color: #FFF;
+
 }
 
-.footer-brand-section p {
-    font-size: 24px;
-    color: #ffffff;
-    max-width: 351px;
-    margin-left: 346px;
-}
-
-.footer-links {
+.footer-element .link {
     display: flex;
     flex-direction: column;
-    gap: 13px;
 }
 
-.footer-links a {
-    text-decoration: none;
-    color: #ffffff;
+.footer-element .link a {
     font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    color: #FFF;
+    padding: 5px 0;
+
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
-    cursor: pointer;
+.footer-element h1 {
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.socials h3 {
+.footer-element .icon {
+    margin-top: 10px;
+}
+
+.footer-element .icon i {
+    font-size: 22px;
+}
+
+.footer-element .follow {
     font-size: 24px;
-    margin-bottom: 19px;
-    margin-right: 328px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Poppins sans-serif;
 }
 
-.socials-icon {
+.hr {
+    border-bottom: 2px solid #FFF;
+    margin-top: -50px;
+    width: 100%;
+}
+
+.copyright {
+    color: #FFF;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 35px;
-    fill: #ffffff;
-    margin-right: 301px;
-}
-
-.socials-icon a {
-    color: #ffffff;
-}
-
-.socials-icon a:hover {
-    color: #bbbbbb;
-}
-
-.copyright p {
-    border-top: 1px solid #ffffff;
-    padding-top: 18px;
-    text-align: center;
-    font-size: 24px;
-    color: #ffffff;
+    height: 40px;
+    font-family: Poppins sans-serif;
 }
