@@ -260,12 +260,81 @@ nav .navbar {
 }
 
 #notes::placeholder {
-    color: rgba(255, 255, 255, 0.50)
+    color: #000000;
 }
 
 #notes:focus {
     outline: 2px solid #f6c453;
     outline-offset: 2px;
+}
+
+.most-ordered-n-review-bg {
+    padding: 32px 64px 72px;
+    background-image: url(images/c26bcefc904e815b4b90657528408c2f.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.most-ordered-cards {
+    max-width: 1376px;
+    margin: 0 auto;
+    padding: 43px 43px 43px;
+    border-radius: 49px;
+    background: linear-gradient(98deg, rgba(181, 173, 130, 0.49) 14.12%, rgba(34, 20, 2, 0.49) 127.74%);
+}
+
+.most-ordered-title {
+    text-align: center;
+    font-family: Poppins sans-serif;
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.popular-dish-cards {
+    margin-top: 9px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.dish-cards {
+    overflow: hidden;
+    padding: 10px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dish-cards img {
+    width: 229px;
+    height: 203px;
+    border-radius: 10px;
+}
+
+.dish-cards h3 {
+    font-size: 20px;
+    margin-top: 6px;
+    color: #000000;
+}
+
+.dish-cards p {
+    font-size: 15px;
+    font-weight: 300;
+    color: #000000;
+}
+
+.dish-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 6px;
+}
+
+.dish-tag .tag {
+    font-size: 10px;
+    
 }
 
 /* footer */
