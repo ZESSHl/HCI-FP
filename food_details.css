@@ -155,6 +155,7 @@ nav .navbar {
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 4px;
+    font-family: Poppins sans-serif;
 }
 
 .desc {
@@ -351,11 +352,6 @@ nav .navbar {
     color: #ffae00;
 }
 
-.dish-rating .fa-heart {
-    color: red;
-    margin-right: 4px;
-}
-
 .reviews {
     padding: 40px 64px 80px;
 }
@@ -536,6 +532,36 @@ footer {
     .popular-dish-cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .reviews {
+        padding: 0 16px;
+    }
+
+    .reviews-area {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .review-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        gap: 8em;
+        padding: 0 24px;
+    }
+
+    .footer-element h1 {
+        font-size: 26px;
+    }
+
+    .footer-element .link a,
+    .footer-element .follow {
+        font-size: 18px;
+    }
+
 }
 
 /* mobile */
@@ -671,7 +697,7 @@ footer {
         width: 34px;
         height: 34px;
     }
-}
+
 
     footer {
         height: auto;
@@ -731,3 +757,4 @@ footer {
         font-size: 12px;
     }
 
+}
