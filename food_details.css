@@ -521,6 +521,36 @@ footer {
 /* Tablet */
 
 @media (max-width: 1024px) {
+    .header nav {
+        padding: 0 20px;
+    }
+
+    nav .logo {
+        padding: 16px 0;
+    }
+
+    nav .navbar {
+        width: auto;
+        gap: 24px;
+        padding: 16px 0;
+        height: auto;
+    }
+
+    .navbar a {
+        font-size: 22px;
+    }
+
+    /* ---------- HERO / NAV-ELEMENT ---------- */
+    .nav-element {
+        height: 70vh;
+        padding: 0 40px;
+    }
+
+    .nav-element h1 {
+        font-size: 44px;
+        width: 100%;
+    }
+
     .one-third-top {
         padding: 40px 32px 60px;
     }
@@ -548,28 +578,136 @@ footer {
         margin: 0 auto;
     }
 
+footer {
+        height: auto;
+        padding-top: 30px;
+    }
+
     .footer-content {
-        gap: 8em;
-        padding: 0 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 24px 20px;
+    }
+
+    .footer-element {
+        flex: 1 1;
     }
 
     .footer-element h1 {
-        font-size: 26px;
+        font-size: 30px;
     }
 
-    .footer-element .link a,
+    .footer-element .link a {
+        font-size: 20px;
+    }
+
     .footer-element .follow {
-        font-size: 18px;
+        font-size: 22px;
     }
 
+    .hr {
+        margin-top: 12px;
+    }
+
+    .copyright {
+        text-align: center;
+        padding-bottom: 12px;
+        font-size: 14px;
+    }
 }
+
+
 
 /* mobile */
 
 @media (max-width: 600px) {
 
-    body {
-        padding-top: 114px;
+.header nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        padding: 0 16px;
+        width: 100%;
+        position: relative;
+    }
+
+    nav .logo img {
+        width: 80px;
+        height: auto;
+    }
+
+    /* show hamburger */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        width: 32px;
+        height: 32px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 20;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        border-radius: 999px;
+        background: #fff;
+        /* <-- BLANC maintenant */
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    /* animation croix */
+    .hamburger.is-active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.is-active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.is-active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* --- SIDEBAR MENU --- */
+
+    .navbar {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #121619;
+        box-shadow: 2px 0 12px rgba(0, 0, 0, 0.25);
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 24px;
+        gap: 24px;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+
+    }
+
+    .navbar.nav-open {
+        transform: translateX(0);
+    }
+
+    .navbar a {
+        font-size: 22px;
+        padding: 6px 0;
+        color: #fff;
     }
 
     .one-third-top {
@@ -698,63 +836,38 @@ footer {
         height: 34px;
     }
 
-
-    footer {
-        height: auto;
-        padding: 24px 16px 12px;
-        background-position: center;
-        background-size: cover;
-    }
-
-    .footer-content {
+.footer-content {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 24px;
+        padding: 0 16px 20px;
         text-align: center;
-    }
-
-    .footer-element {
-        height: auto;
-    }
-
-    .footer-element h1 {
-        font-size: 24px;
-        margin-bottom: 6px;
-    }
-
-    .footer-element p {
-        font-size: 14px;
+        display: flex;
+        align-items: center;
     }
 
     .footer-element .link {
         align-items: center;
     }
 
+    .footer-element h1 {
+        font-size: 26px;
+    }
+
     .footer-element .link a {
-        font-size: 16px;
-        padding: 3px 0;
+        font-size: 18px;
     }
 
     .footer-element .follow {
-        font-size: 16px;
-    }
-
-    .footer-element .icon {
-        margin-top: 6px;
-    }
-
-    .footer-element .icon i {
-        font-size: 18px;
-        margin: 0 6px;
+        font-size: 20px;
     }
 
     .hr {
-        margin-top: 8px;
+        margin-top: 10px;
     }
 
     .copyright {
-        height: auto;
-        padding: 8px 0 0;
         font-size: 12px;
+        padding-bottom: 12px;
     }
 
 }
