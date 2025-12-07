@@ -45,6 +45,8 @@
 
     </header>
 
+    <div class="nav-overlay" id="navOverlay"></div>
+
 <!-- 1/3rd top of the food details -->
 
 <main class="food-detail">
@@ -81,9 +83,9 @@
                 <div class="forms">
                     <label>Quantity</label>
                     <div class="quantity-selector">
-                        <button class="plus-minus-button">-</button>
+                        <button class="minus-button">-</button>
                         <span class="amount">1</span>
-                        <button class="plus-minus-button">+</button>
+                        <button class="plus-button">+</button>
                     </div>
                 </div>
 
@@ -98,6 +100,66 @@
             </div>
         </div>
     </section>
+
+
+    <!-- order popup -->
+    <div class="order-popup-overlay" id="order-popup">
+        <div class="order-popup">
+            <span class="close-popup" id="close-popup">&times;</span>
+
+            <h2>Order Placed!</h2>
+            <p>Your Order is Sent Into The Kitchen</p>
+
+            <button class="open-bill-btn" id="open-bill-button">See Ordered Items</button>
+        </div>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const orderButton   = document.querySelector(".order-button");
+    const popupOverlay  = document.getElementById("order-popup");
+    const closePopup    = document.getElementById("close-popup");
+    const openBillBtn   = document.getElementById("open-bill-button");
+
+    orderButton.addEventListener("click", () => {
+        const name     = document.querySelector(".details h1").textContent.trim();
+        const price    = document.querySelector(".pricing").textContent.trim();
+        const quantity = parseInt(document.querySelector(".amount").textContent.trim(), 10);
+        const notes    = document.getElementById("notes").value.trim() || "No notes";
+        const imageSrc = document.querySelector(".float-bar img").getAttribute("src");
+
+        const order = {
+            name: name,
+            price: price,
+            quantity: quantity,
+            notes: notes,
+            imageSrc: imageSrc,
+            status: "Processing"
+        };
+
+        const existingOrders = JSON.parse(localStorage.getItem("orders") || "[]");
+        existingOrders.push(order);
+        localStorage.setItem("orders", JSON.stringify(existingOrders));
+
+        popupOverlay.style.display = "flex";
+    });
+
+    closePopup.addEventListener("click", () => {
+        popupOverlay.style.display = "none";
+    });
+
+    popupOverlay.addEventListener("click", (e) => {
+        if (e.target === popupOverlay) {
+            popupOverlay.style.display = "none";
+        }
+    });
+
+    openBillBtn.addEventListener("click", () => {
+        window.location.href = "ordered_list.html";
+    });
+});
+</script>
+
 
     <!-- middle most ordered section -->
     <div class="most-ordered-n-review-bg">
@@ -284,5 +346,6 @@
         </div>
     </footer>
 
+<script src="style.js"></script>
 </body>
 </html>

@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: Poppins , sans-serif;
+    background-color: #020d16;
+    padding-top: 200px;
+}
+
+.main-header, .setting, .footer-image {
+    margin: 0 auto;
+}
+
+/* header */
+
+.header nav {
+    background-color: #121619;
+    display: flex;
+    justify-content: space-between;
+    height: 114px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    color: #FFF;
+    font-family: Poppins sans-serif;
+}
+
+.logo {
+    display: flex;
+    padding: 23px 12px;
+    align-items: center;
+    flex: 1 0 0;
+}
+
+nav .logo img {
+    width: 112px;
+    height: 68px;
+    aspect-ratio: 28/17;
+}
+
+nav .navbar {
+    display: flex;
+
+    width: 667px;
+    height: 111px;
+    padding: 28px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+.navbar i{
+    margin-right: 10px;
+}
+.navbar .fa-heart{
+    color: red;
+}
+
+.navbar a {
+    font-size: 32px;
+    color: white;
+}
+
+.nav-element {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.562)),
+        url("./images/nav-element.png");
+
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 222px;
+}
+
+.nav-element h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 64px;
+    width: 690px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* body */
+
+.order_list {
+    min-height: 60vh;
+    padding: 140px 24px 80px;
+    display: flex;
+    justify-content: center;
+    background: #020d16 url("./images/source_Untitled\ design.png") center center / cover no-repeat;
+}
+
+#order-list.order-tiles {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.order-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 24px;
+    border-radius: 20px;
+    background: #ebebeb;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.order-image img {
+    width: 96px;
+    height: 96px;
+    border-radius: 16px;
+    object-fit: cover;
+}
+
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.order-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.order-notes {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+.order-status {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+
+.order-status.processing {
+    color: #ffc857;
+}
+
+/* footer */
+
+footer {
+    background:
+        url("./images/footer.png") 50% / cover no-repeat;
+    height: 312px;
+}
+
+.footer-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25em;
+        font-family: Poppins sans-serif;
+
+}
+
+.footer-element {
+
+    height: 129px;
+    color: #FFF;
+
+}
+
+.footer-element .link {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-element .link a {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    color: #FFF;
+    padding: 5px 0;
+
+}
+
+.footer-element h1 {
+
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-element .icon {
+    margin-top: 10px;
+}
+
+.footer-element .icon i {
+    font-size: 22px;
+}
+
+.footer-element .follow {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    font-family: Poppins sans-serif;
+}
+
+.hr {
+    border-bottom: 2px solid #FFF;
+    margin-top: -50px;
+    width: 100%;
+}
+
+.copyright {
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-family: Poppins sans-serif;
+}
+
+
+@media (max-width: 600px) {
+    .order_list {
+        padding: 120px 16px 60px;
+    }
+
+    .order-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-image img {
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+    }
+}
+
+
+
+

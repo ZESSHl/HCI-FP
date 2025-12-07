@@ -163,7 +163,7 @@ nav .navbar {
     font-size: 10px;
     overflow-y: auto;
     padding-right: 4px;
-    color: lightgrey;
+    color: #ebebeb;
 }
 
 .tags {
@@ -213,7 +213,7 @@ nav .navbar {
     width: fit-content;
 }
 
-.plus-minus-button {
+.plus-button .minus-button{
     width: 15px;
     height: 15px;
     border-radius: 5px;
@@ -226,7 +226,7 @@ nav .navbar {
     justify-content: center;
 }
 
-.plus-minus-button:hover {
+.plus-button .minus-button:hover {
     cursor: pointer;
 }
 
@@ -249,6 +249,12 @@ nav .navbar {
 .order-button:hover {
     cursor: pointer;
 }
+
+.order-button:active {
+    background-color: #f6c453;
+    transform: scale(0.97); 
+}
+
 
 #notes {
     min-height: 90px;
@@ -516,6 +522,62 @@ footer {
     height: 40px;
     font-family: Poppins sans-serif;
 }
+
+/* popup */
+.order-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.order-popup {
+    width: 330px;
+    background: #ffffff;
+    padding: 28px 32px;
+    border-radius: 18px;
+    text-align: center;
+    color: #000;
+    position: relative;
+    animation: popScale 0.25s ease;
+}
+
+.close-popup {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.open-bill-btn {
+    margin-top: 18px;
+    background: #ffc857;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.open-bill-btn:hover {
+    background: #e7b03e;
+}
+
+@keyframes popScale {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
 
 /* responsive */
 /* Tablet */

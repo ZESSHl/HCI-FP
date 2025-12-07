@@ -21,3 +21,20 @@ const hamburger = document.getElementById('hamburger');
                 hamburger.classList.remove('is-active');
             });
         });
+
+const amount = document.querySelector('.amount');
+const plusBtn = document.querySelector('.plus-button');
+const minusBtn = document.querySelector('.minus-button');
+
+plusBtn.addEventListener('click', () => {
+    let value = parseInt(amount.textContent);
+    amount.textContent = value + 1;
+});
+
+minusBtn.addEventListener('click', () => {
+    let value = parseInt(amount.textContent);
+    if (value > 1) {
+        amount.textContent = value - 1;
+    }
+});
+
