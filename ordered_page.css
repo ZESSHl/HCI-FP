@@ -132,15 +132,18 @@ nav .navbar {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    font-family: Poppins sans-serif;
 }
 
 .order-title {
     font-size: 20px;
     font-weight: 700;
+    font-family: Poppins sans-serif;
 }
 
 .order-notes {
     font-size: 14px;
+    font-family: Poppins sans-serif;
     opacity: 0.9;
 }
 
@@ -149,11 +152,34 @@ nav .navbar {
     font-size: 14px;
     font-weight: 600;
     margin-top: 4px;
+    font-family: Poppins sans-serif;
 }
 
 
 .order-status.processing {
     color: #ffc857;
+}
+
+#clear-orders-btn {
+    background: #d9534f; /* red delete style */
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 20px auto;
+    display: block;
+    transition: 0.25s ease;
+}
+
+#clear-orders-btn:hover {
+    background: #c9302c;
+}
+
+#clear-orders-btn:active {
+    background: #b52b27;
 }
 
 /* footer */

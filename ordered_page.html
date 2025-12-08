@@ -57,6 +57,7 @@
     </section>
 </main>
 
+    <button id="clear-orders-btn">Cancel All Orders</button>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -96,6 +97,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const orderList = document.getElementById("order-list");
+    const clearBtn = document.getElementById("clear-orders-btn");
+
+    const orders = JSON.parse(localStorage.getItem("orders") || "[]");
+
+    if (!orders.length) {
+        orderList.innerHTML = "<p>No orders yet.</p>";
+    } else {
+        orderList.innerHTML = "";
+        orders.forEach(order => {
+            const card = document.createElement("div");
+            card.className = "order-card";
+            card.innerHTML = `
+                <div class="order-image">
+                    <img src="${order.imageSrc}" alt="${order.name}">
+                </div>
+                <div class="order-info">
+                    <h3 class="order-title">${order.name}</h3>
+                    <p class="order-qty">Quantity: ${order.quantity}</p>
+                    <p class="order-notes">Notes: ${order.notes}</p>
+                    <p class="order-status processing">Status: ${order.status}</p>
+                </div>
+            `;
+            orderList.appendChild(card);
+        });
+    }
+
+    // ❌ Clear button functionality
+    clearBtn.addEventListener("click", () => {
+        localStorage.removeItem("orders");
+        orderList.innerHTML = "<p>No orders yet.</p>";
+    });
+});
+</script>
+
 
 
         <!-- footer -->
