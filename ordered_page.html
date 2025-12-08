@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
         orderList.appendChild(card);
     });
 });
-/* localStorage.removeItem("orders"); */
 
 
 </script>
@@ -127,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ❌ Clear button functionality
     clearBtn.addEventListener("click", () => {
         localStorage.removeItem("orders");
         orderList.innerHTML = "<p>No orders yet.</p>";
